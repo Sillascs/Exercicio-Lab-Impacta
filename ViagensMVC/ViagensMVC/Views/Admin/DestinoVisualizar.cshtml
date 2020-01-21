@@ -1,7 +1,6 @@
 ﻿@model ViagensMVC.Models.Destino
 
 <h2>@ViewBag.Title</h2>
-<h3>Deseja excluir este registro?</h3>
 <div>
     <hr />
     <dl class="dl-horizontal">
@@ -15,15 +14,10 @@
         <dd>@Html.DisplayFor(model => model.Cidade) </dd>
     </dl>
     <div>
-        <img src="~/imagens/@Model.Foto" class="imagemForm" />
+        <img src="~/imagens/@Model.Foto" class="imagemForm"/>
     </div>
 
-    @using (Html.BeginForm())
-    {
-        <div class="form-actions no-color">
-            <input type="submit" value="Excluir"
-                   class="btn btn-default" /> |
-            @Html.ActionLink("Voltar", "DestinoListagem")
-        </div>
-    }
+    <div class="form-actions no-color">
+       @Html.ActionLink("Voltar", "DestinoListagem")
+    </div>
 </div>
